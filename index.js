@@ -33,10 +33,7 @@ exports.throttle = function throttle(func, time) {
  */
 exports.debounce = function debounce(func, time) {
   return function() {
-    let previousCall = this.lastCall;
-    this.lastCall = Date.now();
-    if (previousCall && this.lastCall - previousCall <= time)
-      clearTimeout(this.lastCallTimer);
-    this.lastCallTimer = setTimeout(() => func(arguments), time);
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+    this.timeoutId = setTimeout(() => func(arguments), time);
   };
 };
