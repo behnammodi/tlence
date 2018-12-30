@@ -26,14 +26,17 @@ exports.throttle = function throttle(func, time) {
 /**
  * @description debounce
  * @public
- * @version 1.0.1
+ * @version 1.0.2
  * @param {function} func
  * @param {number} time
  * @returns {function} debounced function
  */
 exports.debounce = function debounce(func, time) {
   return function() {
-    if (this.timeoutId) clearTimeout(this.timeoutId);
-    this.timeoutId = setTimeout(() => func(arguments), time);
+    clearTimeout(this.timeoutId);
+    var args = arguments;
+    this.timeoutId = setTimeout(function() {
+      func(args);
+    }, time);
   };
 };
