@@ -17,12 +17,15 @@ function log(server) {
 
 const throttleLog = throttle(log, 5000);
 // just run first call to 5s
-throttleLog('local');
-throttleLog('local');
-throttleLog('local');
-throttleLog('local');
-throttleLog('local');
-throttleLog('local');
+throttleLog.run('local');
+throttleLog.run('local');
+throttleLog.run('local');
+throttleLog.run('local');
+throttleLog.run('local');
+throttleLog.run('local');
+
+// you can reset call delay
+throttleLog.reset();
 
 const debounceLog = debounce(log, 5000);
 // just run last call to 5s
