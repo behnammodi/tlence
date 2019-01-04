@@ -15,12 +15,17 @@ exports.__esModule = true;
  */
 exports.throttle = function throttle(func, delay) {
   var nextAllowed = 0;
-  return function() {
-    var now = Date.now();
-    if (now < nextAllowed) return;
-    nextAllowed = now + delay;
-    func(arguments);
-  };
+    return {
+        run: function () {
+            var now = Date.now();
+            if (now < nextAllowed) return;
+            nextAllowed = now + delay;
+            func(arguments);
+        },
+        reset: function () {
+            nextAllowed = 0;
+        }
+    };
 };
 
 /**
