@@ -11,7 +11,7 @@ exports.__esModule = true;
  * @version 1.0.5
  * @param {function} func
  * @param {number} delay
- * @returns {function} throttled function
+ * @returns {object} throttled object
  */
 exports.throttle = function throttle(func, delay) {
   var nextAllowed = 0;
