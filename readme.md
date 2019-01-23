@@ -1,5 +1,22 @@
 # tlence
 
+[![NPM](https://nodei.co/npm/tlence.png)](https://nodei.co/npm/tlence/)
+
+[![install size](https://packagephobia.now.sh/badge?p=tlence)](https://packagephobia.now.sh/result?p=tlence) [![dependencies](https://david-dm.org/uxitten/tlence.svg)](https://david-dm.org/uxitten/tlence.svg)
+
+
+<a href="https://www.npmjs.com/package/tlence">
+  <img src="https://img.shields.io/npm/v/tlence.svg" alt="Version">
+</a>
+
+<a href="https://www.npmjs.com/package/tlence">
+  <img src="https://img.shields.io/npm/l/tlence.svg" alt="License">
+</a>
+
+<a href="https://www.npmjs.com/package/tlence">
+  <img src="https://img.shields.io/npm/dm/tlence.svg" alt="Downloads">
+</a>
+
 debounce and throttle techniques for performance
 
 ## install
