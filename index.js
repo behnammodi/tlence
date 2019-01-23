@@ -19,7 +19,7 @@ exports.throttle = function throttle(func, delay) {
     var now = Date.now();
     if (now < nextAllowed) return;
     nextAllowed = now + delay;
-    func(arguments);
+    func.apply(undefined, arguments);
   };
 };
 
@@ -32,11 +32,12 @@ exports.throttle = function throttle(func, delay) {
  * @returns {function} debounced function
  */
 exports.debounce = function debounce(func, delay) {
+  let timeoutId = null;
   return function() {
-    clearTimeout(this.timeoutId);
+    clearTimeout(timeoutId);
     var args = arguments;
-    this.timeoutId = setTimeout(function() {
-      func(args);
+    timeoutId = setTimeout(function() {
+      func.apply(undefined, args);
     }, delay);
   };
 };
