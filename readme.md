@@ -1,5 +1,7 @@
 # tlence
 
+![tlence](http://itten.ir/file/tlence-logo.png)
+
 [![NPM](https://nodei.co/npm/tlence.png)](https://nodei.co/npm/tlence/)
 
 [![install size](https://packagephobia.now.sh/badge?p=tlence)](https://packagephobia.now.sh/result?p=tlence) [![dependencies](https://david-dm.org/uxitten/tlence.svg)](https://david-dm.org/uxitten/tlence.svg)
