@@ -41,3 +41,14 @@ exports.debounce = function debounce(func, delay) {
     }, delay);
   };
 };
+
+/**
+ * @description delay
+ * @public
+ * @version 1.1.0
+ * @param {number} time
+ * @return {object} promise
+ */
+exports.delay = function(time) {
+  return new Promise(done => setTimeout(done, time));
+};
