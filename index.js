@@ -19,7 +19,7 @@ exports.throttle = function throttle(func, delay) {
     var now = Date.now();
     if (now < nextAllowed) return;
     nextAllowed = now + delay;
-    func.apply(undefined, arguments);
+    func.apply(this, arguments);
   };
 };
 
@@ -36,8 +36,9 @@ exports.debounce = function debounce(func, delay) {
   return function() {
     clearTimeout(timeoutId);
     var args = arguments;
+    var selfThis = this;
     timeoutId = setTimeout(function() {
-      func.apply(undefined, args);
+      func.apply(selfThis, args);
     }, delay);
   };
 };
