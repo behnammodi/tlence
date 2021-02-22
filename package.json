@@ -1,6 +1,6 @@
 {
   "name": "tlence",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "debounce and throttle techniques for performance",
   "main": "index.js",
   "scripts": {
