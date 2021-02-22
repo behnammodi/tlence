@@ -1,6 +1,6 @@
 # tlence
 
-![tlence](http://itten.ir/file/tlence-logo.png)
+![tlence](https://user-images.githubusercontent.com/1549069/108704171-e1a4a880-7520-11eb-91cb-88e76b8e12db.png)
 
 [![NPM](https://nodei.co/npm/tlence.png)](https://nodei.co/npm/tlence/)
 
