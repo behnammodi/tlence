@@ -15,7 +15,7 @@ exports.__esModule = true;
  */
 exports.throttle = function throttle(func, delay) {
   var nextAllowed = 0;
-  return function() {
+  return function () {
     var now = Date.now();
     if (now < nextAllowed) return;
     nextAllowed = now + delay;
@@ -33,11 +33,11 @@ exports.throttle = function throttle(func, delay) {
  */
 exports.debounce = function debounce(func, delay) {
   let timeoutId = null;
-  return function() {
+  return function () {
     clearTimeout(timeoutId);
     var args = arguments;
     var selfThis = this;
-    timeoutId = setTimeout(function() {
+    timeoutId = setTimeout(function () {
       func.apply(selfThis, args);
     }, delay);
   };
@@ -50,6 +50,6 @@ exports.debounce = function debounce(func, delay) {
  * @param {number} time
  * @return {object} promise
  */
-exports.delay = function(time) {
-  return new Promise(done => setTimeout(done, time));
+exports.delay = function (time) {
+  return new Promise(function (done) { setTimeout(done, time) });
 };
