@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/behnammodi/tlence/issues"
   },
-  "homepage": "https://github.com/behnammodi/tlence#readme"
+  "homepage": "https://github.com/behnammodi/tlence#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "husky": "^5.2.0"
+  }
 }
