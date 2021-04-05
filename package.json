@@ -4,7 +4,9 @@
   "description": "debounce and throttle techniques for performance",
   "main": "index.js",
   "scripts": {
-    "test": "node index.test"
+    "test": "node index.test",
+    "preversion": "npm run test",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
