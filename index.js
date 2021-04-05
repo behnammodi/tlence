@@ -5,6 +5,11 @@
 
 exports.__esModule = true;
 
+const getCurrentTime =
+  typeof performance === 'object' && typeof performance.now === 'function'
+    ? () => performance.now()
+    : () => Date.now();
+
 /**
  * @description throttle
  * @public
@@ -16,7 +21,7 @@ exports.__esModule = true;
 exports.throttle = function throttle(func, delay) {
   var nextAllowed = 0;
   return function () {
-    var now = Date.now();
+    var now = getCurrentTime();
     if (now < nextAllowed) return;
     nextAllowed = now + delay;
     func.apply(this, arguments);
