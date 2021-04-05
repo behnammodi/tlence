@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.test",
-    "preversion": "npm run test",
+    "format": "prettier ./*.* --write --ignore-unknown",
+    "preversion": "npm run format && npm run test",
     "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
-    "husky": "^5.2.0"
+    "husky": "^5.2.0",
+    "prettier": "^2.2.1"
   }
 }

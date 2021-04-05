@@ -31,42 +31,42 @@ npm install tlence
 ### Throttle
 
 ```javascript
-import { throttle } from "tlence";
+import { throttle } from 'tlence';
 
 function log(server) {
-  console.log("connecting to", server);
+  console.log('connecting to', server);
 }
 
 const throttleLog = throttle(log, 5000);
 // just run first call to 5s
-throttleLog("local");
-throttleLog("local");
-throttleLog("local");
-throttleLog("local");
-throttleLog("local");
-throttleLog("local");
+throttleLog('local');
+throttleLog('local');
+throttleLog('local');
+throttleLog('local');
+throttleLog('local');
+throttleLog('local');
 ```
 
 ### Debounce
 
 ```javascript
-import { debounce, delay } from "tlence";
+import { debounce, delay } from 'tlence';
 const debounceLog = debounce(log, 5000);
 // just run last call to 5s
-debounceLog("local");
-debounceLog("local");
-debounceLog("local");
-debounceLog("local");
-debounceLog("local");
-debounceLog("local");
+debounceLog('local');
+debounceLog('local');
+debounceLog('local');
+debounceLog('local');
+debounceLog('local');
+debounceLog('local');
 ```
 
 ### Delay
 
 ```javascript
-import { delay } from "tlence";
-console.log("delay 1");
+import { delay } from 'tlence';
+console.log('delay 1');
 await delay(5000);
 // run after 5s
-console.log("delay 2");
+console.log('delay 2');
 ```

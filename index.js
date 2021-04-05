@@ -1,7 +1,7 @@
 /**
  * @author Behnam Mohammadi
  */
-"use strict";
+'use strict';
 
 exports.__esModule = true;
 
@@ -51,5 +51,7 @@ exports.debounce = function debounce(func, delay) {
  * @return {object} promise
  */
 exports.delay = function (time) {
-  return new Promise(function (done) { setTimeout(done, time) });
+  return new Promise(function (done) {
+    setTimeout(done, time);
+  });
 };
