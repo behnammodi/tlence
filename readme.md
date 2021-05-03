@@ -18,8 +18,9 @@
   <img src="https://img.shields.io/npm/dm/tlence.svg" alt="Downloads">
 </a>
 
-<img src="https://travis-ci.com/behnammodi/tlence.svg?branch=master" alt="Build Status">
-
+<a href="https://travis-ci.com/github/behnammodi/tlence">
+  <img src="https://travis-ci.com/behnammodi/tlence.svg?branch=master" alt="Build Status">
+</a>
 
 debounce and throttle techniques for performance
 
