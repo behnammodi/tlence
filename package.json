@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.test",
-    "format": "prettier ./*.* --write --ignore-unknown",
+    "lint": "eslint ./index.js",
+    "format": "prettier ./index.js --write --ignore-unknown",
     "preversion": "npm run format && npm run test",
-    "postversion": "git push && git push --tags && npm publish"
+    "postversion": "git push && git push --tags && npm publish",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,21 @@
   },
   "homepage": "https://github.com/behnammodi/tlence#readme",
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "husky": "^5.2.0",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run format"
+    ],
+    "./index.js": [
+      "npm run lint"
+    ]
+  },
+  "dependencies": {
+    "eslint": "^7.25.0"
   }
 }
